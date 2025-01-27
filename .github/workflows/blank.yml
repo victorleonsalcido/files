@@ -33,8 +33,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Print environment
-        run: echo ${{ environment }}
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world ${{ secrets.T_U }} ${{ secrets.T_P }}!
