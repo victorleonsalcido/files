@@ -52,7 +52,7 @@ jobs:
           if [ -n '${{ env.usr }}' ]
           then
             echo "using pass ${{ env.pass }}"
-            command=$command${{ env.pass }}
+            command=$command ${{ env.pass }}
             echo "assigning pass to command $command"
           else
             echo "pass not provided"
