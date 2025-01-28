@@ -59,7 +59,8 @@ jobs:
             echo "pass not provided"
           fi
           
-          $command="$command ls"
+          command="$command ls"
+          $command
           echo "command $command"
           echo $pass
 
