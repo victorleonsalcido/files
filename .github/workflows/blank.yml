@@ -43,6 +43,7 @@ jobs:
           if [ -n '${{ env.usr }}' ]
           then
             echo "using user ${{ env.usr }}"
+            command="${{ env.usr }};"
           else
             echo "user not provided"
           fi
@@ -50,10 +51,13 @@ jobs:
           if [ -n '${{ env.usr }}' ]
           then
             echo "using pass ${{ env.pass }}"
-            echo $pass
+            command=$command${{ env.pass }}
           else
-            echo "user not provided"
+            echo "pass not provided"
           fi
+          
+          $command
+          echo $pass
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
