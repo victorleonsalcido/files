@@ -43,25 +43,25 @@ jobs:
           command=""
           if [ -n '${{ env.usr }}' ]
           then
-            echo "using user ${{ env.usr }}"
-            command="${{ env.usr }};"
-            echo "assigning user to command $command"
+            echo "using user: ${{ env.usr }}"
+            command="${{ env.usr }}"
+            echo "assigning user to command: $command"
           else
             echo "user not provided"
           fi
           
           if [ -n '${{ env.usr }}' ]
           then
-            echo "using pass ${{ env.pass }}"
-            command="$command ${{ env.pass }}; "
-            echo "assigning pass to command $command"
+            echo "using pass: ${{ env.pass }}"
+            command="$command ${{ env.pass }} "
+            echo "assigning pass to command: $command"
           else
             echo "pass not provided"
           fi
           
           command="$command ls"
           $command
-          echo "command $command"
+          echo "command: $command"
           echo $pass
 
       # Runs a set of commands using the runners shell
