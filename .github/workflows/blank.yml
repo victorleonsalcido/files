@@ -44,6 +44,7 @@ jobs:
           then
             echo "using user ${{ env.usr }}"
             command="${{ env.usr }};"
+            echo "assigning user to command $command"
           else
             echo "user not provided"
           fi
@@ -52,11 +53,12 @@ jobs:
           then
             echo "using pass ${{ env.pass }}"
             command=$command${{ env.pass }}
+            echo "assigning pass to command $command"
           else
             echo "pass not provided"
           fi
           
-          echo "$command"
+          echo "command $command"
           $command
           echo $pass
 
