@@ -53,8 +53,8 @@ jobs:
             echo "user nor pass not provided"
           fi
           
-          ls ~
-          command="$command ls ~"
+          ls ../
+          command="$command ls ../"
           $command
           echo "command: '$command'"
           echo "'$pass'"
