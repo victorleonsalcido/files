@@ -44,17 +44,16 @@ jobs:
           if [ -n '${{ env.usr }}' ] && [ -n '${{ env.pass }}' ]
           then
             echo "using user: ${{ env.usr }}"
-            command="${{ env.usr }} ;"
-            echo "assigning user to command: $command"
+            ${{ env.usr }}
             echo "using pass: ${{ env.pass }}"
-            command="$command ${{ env.pass }} ;"
+            ${{ env.pass }}
             echo "assigning pass to command: $command"
           else
             echo "user nor pass not provided"
           fi
           
-
-          command="$command ls ../"
+          $command
+          command="ls ../"
           $command
           echo "command: '$command'"
           echo "'$pass'"
