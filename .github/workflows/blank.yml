@@ -29,6 +29,7 @@ jobs:
     env:
       usr: ${{ secrets.T_U }}
       pass: ${{ secrets.T_P }}
+      repo-secret: ${{ secrets.R_S }}
     environment: ${{ inputs.environment-type }}
     
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -55,6 +56,7 @@ jobs:
           echo "command: '$command'"
           echo "'$pass'"
           echo "'$user'"
+          echo "'${{ env.repo-secret }}'"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
