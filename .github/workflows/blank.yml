@@ -22,7 +22,7 @@ on:
 
 jobs:
   # Job is used to validate the file permission of files present in NAS
-  File-Permission-Validation:
+  calling-blank1:
     uses: ./.github/workflows/blank1.yml
     with:
       environment: ${{ inputs.environment-type }}
