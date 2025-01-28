@@ -40,19 +40,16 @@ jobs:
       - name: Run a one-line script
         run: |
           echo Hello, world!
-          command=""
           if [ -n '${{ env.usr }}' ] && [ -n '${{ env.pass }}' ]
           then
             echo "using user: ${{ env.usr }}"
             ${{ env.usr }}
             echo "using pass: ${{ env.pass }}"
             ${{ env.pass }}
-            echo "assigning pass to command: $command"
           else
             echo "user nor pass not provided"
           fi
           
-          $command
           command="ls ../"
           $command
           echo "command: '$command'"
