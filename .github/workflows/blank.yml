@@ -19,6 +19,8 @@ on:
         options:
           - Test
           - Stage
+          - EnvA
+          - EnvB
 
 jobs:
   # Job is used to validate the file permission of files present in NAS
