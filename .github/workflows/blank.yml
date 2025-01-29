@@ -27,7 +27,7 @@ jobs:
   calling-blank1:
     uses: ./.github/workflows/blank1.yml
     with:
-      environment: ${{ inputs.environment-type }}
+      environment: ${{ vars[format('{0}', inputs.environment-type)] }}
     secrets:
       GSU: ${{ secrets.T_U }}
       GSP: ${{ secrets.T_P }}
